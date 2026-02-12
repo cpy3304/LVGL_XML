@@ -27,6 +27,16 @@ extern "C" {
  *      DEFINES
  *********************/
 
+#define BUTTON_BG_COLOR lv_color_hex3(0x000)
+
+#define BUTTON_TXT_COLOR lv_color_hex3(0xfff)
+
+#define BUTTON_HEIGHT 40
+
+#define BUTTON_WIDTH 80
+
+#define BACK_BTN_TXT 80
+
 /**********************
  *      TYPEDEFS
  **********************/
@@ -53,9 +63,14 @@ extern lv_font_t * font_medium;
  * Images
  *----------------*/
 
+extern const void * flower_data;
+extern const void * flower_file;
+
 /*----------------
  * Subjects
  *----------------*/
+
+extern lv_subject_t volume;
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -80,6 +95,10 @@ void ui_hello_world_init_gen(const char * asset_path);
  **********************/
 
 /*Include all the widget and components of this library*/
+#include "components/button_i_gen.h"
+#include "components/button_w_gen.h"
+#include "components/slider_bind_gen.h"
+#include "screens/screen2_gen.h"
 #include "screens/screen_hello_world_gen.h"
 
 #ifdef __cplusplus

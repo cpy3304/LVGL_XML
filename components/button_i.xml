@@ -1,0 +1,22 @@
+<component>
+	<api>
+		<prop name="button_text" type="string" default="Click_me" />
+	</api>
+
+	<styles>
+		<style
+			name="style_btn"
+			height="#button_height"
+			width="#button_width"
+			bg_color="#button_bg_color"
+			text_color="#button_txt_color"
+		/>
+		<style name="style_btn_press" text_color="0xf0f" />
+	</styles>
+
+	<view extends="lv_button">
+		<style name="style_btn" />
+		<style name="style_btn_press" selector="pressed" />
+		<lv_label text="$button_text" align="center" />
+	</view>
+</component>

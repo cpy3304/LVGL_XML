@@ -1,7 +1,12 @@
 list(
   APPEND
   PROJECT_SOURCES
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_medium_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/button_i_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/button_w_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/slider_bind_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen2_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_hello_world_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/ui_hello_world_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/ui_hello_world.c)
+  ${CMAKE_CURRENT_LIST_DIR}/ui_hello_world.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_medium_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/images/flower_data_data.c)

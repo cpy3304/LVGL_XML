@@ -1,0 +1,10 @@
+<component>
+	<api>
+		<prop name="subject" type="subject" default="volume" />
+	</api>
+
+	<view width="100%" height="30%" flex_flow="column" style_flex_main_place="center" style_flex_cross_place="center">
+		<lv_slider bind_value="$subject" width="100%" />
+		<lv_label bind_text="$subject" />
+	</view>
+</component>

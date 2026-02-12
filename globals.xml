@@ -5,6 +5,16 @@
 
 	<consts>
 		<!-- Add <px>, <int>, <color> etc here -->
+		<color name="button_bg_color" value="0x000" />
+		<color name="button_txt_color" value="0xfff" />
+		<int name="button_height" value="40" />
+		<int name="button_width" value="80" />
+		<int name="back_btn_txt" value="80" />
+		<color name="dark_blue" value="0x003762" />
+		<color name="yellow" value="0xda9d19" />
+		<int name="unit_small" value="6" />
+		<int name="unit_medium" value="12" />
+		<int name="unit_large" value="24" />
 	</consts>
 
 	<styles>
@@ -13,10 +23,13 @@
 
 	<subjects>
 		<!-- Add <int>, <string>, or <float> subjects here -->
+		<int name="volume" value="50" />
 	</subjects>
 
 	<images>
 		<!-- Add <file> or <data> tags here -->
+		<data src_path="images/orange-flower.png" name="flower_data" color_format="argb8888" />
+		<file src_path="images/orange-flower.png" name="flower_file" />
 	</images>
 
 	<fonts>

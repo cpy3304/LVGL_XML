@@ -1,0 +1,3 @@
+<component>
+	<view extends="button_i" style_text_color="0xf0f" />
+</component>

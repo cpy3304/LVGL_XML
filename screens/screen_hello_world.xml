@@ -3,11 +3,72 @@
 		<style name="style_main" bg_color="0x00688a" />
 	</styles>
 
-	<view>
+	<animations>
+		<timeline name="anbtn66">
+			<include_timeline target="anbtn" timeline="showup" />
+		</timeline>
+	</animations>
+
+	<view
+		flex_flow="column"
+		height="100%"
+		width="100%"
+		style_flex_main_place="start"
+		style_flex_track_place="center"
+		style_flex_cross_place="center"
+		style_pad_row="0"
+	>
 		<style name="style_main" />
 
-		<lv_button align="center" style_bg_color="0x111">
-			<lv_label text="Hell9o world" style_text_font="font_medium" />
-		</lv_button>
+		<play_timeline_event target="self" timeline="anbtn66" trigger="screen_loaded" />
+
+		<lv_obj
+			width="100%"
+			height="80%"
+			flex_flow="row"
+			style_flex_track_place="center"
+			style_flex_cross_place="center"
+			style_pad_all="0"
+			style_pad_column="0"
+		>
+			<lv_obj
+				width="50%"
+				height="100%"
+				style_radius="0"
+				flex_flow="column"
+				style_flex_main_place="center"
+				style_flex_track_place="center"
+				style_flex_cross_place="center"
+			>
+				<button_i>
+					<screen_create_event screen="screen2" anim_type="move_left" duration="500" />
+				</button_i>
+				<button_i />
+				<button_i />
+			</lv_obj>
+
+			<lv_obj width="50%" height="100%" style_radius="0">
+				<button_i x="0" y="20" />
+				<button_i x="0" y="80" />
+
+				<button_normal name="anbtn" x="0" y="140" />
+			</lv_obj>
+		</lv_obj>
+		<lv_obj
+			width="100%"
+			height="100%"
+			flex_flow="column"
+			style_flex_main_place="center"
+			style_flex_track_place="center"
+			style_flex_cross_place="center"
+		>
+			<lv_image src="flower_file" />
+			<lv_label text="Hello world" style_text_font="font_medium" style_text_color="0x000" />
+			<slider_bind subject="volume" />
+			<lv_label translation_tag="dog" />
+			<lv_label translation_tag="cat" />
+			<lv_label translation_tag="house" />
+			<lv_label translation_tag="person" />
+		</lv_obj>
 	</view>
 </screen>

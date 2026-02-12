@@ -40,6 +40,10 @@
  *-------------------*/
 
 /*----------------
+ * Global styles
+ *----------------*/
+
+/*----------------
  * Fonts
  *----------------*/
 
@@ -50,13 +54,15 @@ extern lv_font_t font_medium_data;
  * Images
  *----------------*/
 
-/*----------------
- * Global styles
- *----------------*/
+const void * flower_data;
+extern const void * flower_data_data;
+const void * flower_file;
 
 /*----------------
  * Subjects
  *----------------*/
+
+lv_subject_t volume;
 
 /**********************
  *      MACROS
@@ -71,6 +77,10 @@ void ui_hello_world_init_gen(const char * asset_path)
     char buf[256];
 
     /*----------------
+     * Global styles
+     *----------------*/
+
+    /*----------------
      * Fonts
      *----------------*/
 
@@ -81,13 +91,15 @@ void ui_hello_world_init_gen(const char * asset_path)
     /*----------------
      * Images
      *----------------*/
-    /*----------------
-     * Global styles
-     *----------------*/
+    flower_data = &flower_data_data;
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/orange-flower.png");
+    flower_file = lv_strdup(buf);
 
     /*----------------
      * Subjects
      *----------------*/
+    lv_subject_init_int(&volume, 50);
+
     /*----------------
      * Translations
      *----------------*/
@@ -99,6 +111,7 @@ void ui_hello_world_init_gen(const char * asset_path)
     lv_xml_register_font(NULL, "font_medium", font_medium);
 
     /* Register subjects */
+    lv_xml_register_subject(NULL, "volume", &volume);
 
     /* Register callbacks */
 #endif
@@ -107,6 +120,8 @@ void ui_hello_world_init_gen(const char * asset_path)
      * While running in the editor skip this step to update the preview when the XML changes */
 #if LV_USE_XML && !defined(LV_EDITOR_PREVIEW)
     /* Register images */
+    lv_xml_register_image(NULL, "flower_data", flower_data);
+    lv_xml_register_image(NULL, "flower_file", flower_file);
 #endif
 
 #if LV_USE_XML == 0

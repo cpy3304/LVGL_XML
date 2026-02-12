@@ -3,12 +3,6 @@
 		<style name="style_main" bg_color="0x00688a" />
 	</styles>
 
-	<animations>
-		<timeline name="anbtn66">
-			<include_timeline target="anbtn" timeline="showup" />
-		</timeline>
-	</animations>
-
 	<view
 		flex_flow="column"
 		height="100%"
@@ -19,8 +13,6 @@
 		style_pad_row="0"
 	>
 		<style name="style_main" />
-
-		<play_timeline_event target="self" timeline="anbtn66" trigger="screen_loaded" />
 
 		<lv_obj
 			width="100%"
